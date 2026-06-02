@@ -1,0 +1,7 @@
+<screen>
+	<styles>
+		<style name="style_main" />
+		<style name="style_indicator" />
+		<style name="style_knob" />
+	</styles>
+</screen>
