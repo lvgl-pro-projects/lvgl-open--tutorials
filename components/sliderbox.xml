@@ -2,7 +2,7 @@
 	<previews>
 		<preview name="light" style_pad_all="20" />
 		<preview name="dark" style_pad_all="20" style_bg_color="0x888">
-			<set_subject name="dark_theme" value="1" />
+			<set_subject name="subject_dark_mode" value="1" />
 		</preview>
 	</previews>
 
@@ -21,7 +21,7 @@
 	</consts>
 
 	<view width="#width" height="content" flex_flow="row" style_flex_cross_place="center">
-		<bind_style name="style_dark" subject="dark_theme" ref_value="1" />
+		<bind_style name="style_dark" subject="subject_dark_mode" ref_value="1" />
 
 		<!-- Just show the title from the API property -->
 		<lv_label text="$title" width="100%" style_text_align="center" />
