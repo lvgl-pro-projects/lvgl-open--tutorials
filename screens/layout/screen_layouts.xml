@@ -1,5 +1,5 @@
 <!-- This screen contains many nested layouts.
-     By pressing Ctrl or Cmd you can visualize the bounding box of the UI elements -->
+     By pressing Alt you can visualize the bounding box of the UI elements -->
 <screen>
 	<view>
 		<!-- The whole screen is a column layout: header on the top and some content below it -->
@@ -13,9 +13,9 @@
 				style_bg_opa="100%"
 				style_bg_color="0x002c57"
 			>
-				<button text="First" />
-				<button text="Second" />
-				<button text="Third" />
+				<button_normal label_text="First" />
+				<button_normal label_text="Second" />
+				<button_normal label_text="Third" />
 			</row>
 
 			<!-- A simple column with . Add a lot of them to make the screen scrolling. -->
@@ -31,6 +31,8 @@
 				<lv_checkbox text="Eighth" />
 				<lv_checkbox text="Nine" />
 				<lv_checkbox text="Tenth" />
+				<lv_checkbox text="Eleventh" />
+				<lv_checkbox text="Twelfth" />
 			</column>
 
 			<row
@@ -46,6 +48,6 @@
 		</column>
 
 		<!-- This floating button won't be scrolled -->
-		<button text="Floating" floating="true" align="bottom_right" x="-20" y="-12" />
+		<button_normal label_text="Floating" floating="true" align="bottom_right" x="-20" y="-12" />
 	</view>
 </screen>

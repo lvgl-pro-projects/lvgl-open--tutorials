@@ -8,7 +8,7 @@
 		<int name="unit_small" value="6" />
 		<int name="unit_medium" value="12" />
 		<int name="unit_large" value="24" />
-		<color name="dark_blue" value="0x003762" />
+		<color name="dark_blue" value="0x035391" />
 		<color name="yellow" value="0xda9d19" />
 	</consts>
 
@@ -18,16 +18,20 @@
 
 	<subjects>
 		<!-- Add <int>, <string>, or <float> subjects here -->
+		<int name="subject_dark_mode" value="0" />
+		<int name="subject_max_current" value="0" />
+		<int name="subject_timeout" value="0" />
+		<int name="subject_volume" value="0" />
 	</subjects>
 
-	<images>
+	<images memory="int_flash">
 		<!-- Add <file> or <data> tags here -->
 
 		<data src_path="images/orange-flower.png" name="flower_data" color_format="argb8888" />
 		<file src_path="images/orange-flower.png" name="flower_file" />
 	</images>
 
-	<fonts>
+	<fonts memory="int_flash">
 		<!-- Add <bin> , <tiny_ttf>, <freetype> tags here -->
 
 		<!-- <bin as_file="false"> means convert the font to C array -->
