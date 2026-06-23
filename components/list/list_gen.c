@@ -8,7 +8,7 @@
  *********************/
 
 #include "list_gen.h"
-#include "../../ui_animations.h"
+#include "../../tutorials.h"
 
 /*********************
  *      DEFINES
@@ -37,50 +37,59 @@ lv_obj_t * list_create(lv_obj_t * parent)
 {
     LV_TRACE_OBJ_CREATE("begin");
 
-    lv_obj_t * lv_obj_0 = lv_obj_create(parent);
-    lv_obj_set_name_static(lv_obj_0, "list_#");
-    lv_obj_set_flex_flow(lv_obj_0, LV_FLEX_FLOW_COLUMN);
-    lv_obj_set_style_pad_all(lv_obj_0, UNIT_SMALL, 0);
-    lv_obj_set_style_flex_cross_place(lv_obj_0, LV_FLEX_ALIGN_CENTER, 0);
-    lv_obj_set_style_flex_track_place(lv_obj_0, LV_FLEX_ALIGN_CENTER, 0);
-    lv_obj_set_style_bg_color(lv_obj_0, lv_color_hex(0x8db4ef), 0);
-    lv_obj_set_height(lv_obj_0, lv_pct(100));
-    lv_obj_set_width(lv_obj_0, lv_pct(50));
 
-    lv_obj_t * button_0 = button_normal_create(lv_obj_0, "Button 0");
-    lv_obj_set_name(button_0, "button_0");
+    lv_obj_t * the_root = NULL;
 
-    lv_obj_t * button_1 = button_normal_create(lv_obj_0, "Button 1");
-    lv_obj_set_name(button_1, "button_1");
+    #if TUTORIALS_CHECK_COMPILE_TARGET(TUTORIALS_TARGET_ALL)
+    if (tutorials_check_target(TUTORIALS_TARGET_ALL)) {
+        lv_obj_t * lv_obj_0 = lv_obj_create(parent);
+        lv_obj_set_name_static(lv_obj_0, "list_#");
+        lv_obj_set_flex_flow(lv_obj_0, LV_FLEX_FLOW_COLUMN);
+        lv_obj_set_style_pad_all(lv_obj_0, UNIT_SMALL, 0);
+        lv_obj_set_style_flex_cross_place(lv_obj_0, LV_FLEX_ALIGN_CENTER, 0);
+        lv_obj_set_style_flex_track_place(lv_obj_0, LV_FLEX_ALIGN_CENTER, 0);
+        lv_obj_set_style_bg_color(lv_obj_0, lv_color_hex(0x8db4ef), 0);
+        lv_obj_set_height(lv_obj_0, lv_pct(100));
+        lv_obj_set_width(lv_obj_0, lv_pct(50));
 
-    lv_obj_t * button_2 = button_normal_create(lv_obj_0, "Button 2");
-    lv_obj_set_name(button_2, "button_2");
+        lv_obj_t * button_0 = button_normal_create(lv_obj_0, "Button 0");
+        lv_obj_set_name(button_0, "button_0");
 
-    lv_obj_t * button_3 = button_normal_create(lv_obj_0, "Button 3");
-    lv_obj_set_name(button_3, "button_3");
+        lv_obj_t * button_1 = button_normal_create(lv_obj_0, "Button 1");
+        lv_obj_set_name(button_1, "button_1");
 
-    lv_obj_t * button_4 = button_normal_create(lv_obj_0, "Button 4");
-    lv_obj_set_name(button_4, "button_4");
+        lv_obj_t * button_2 = button_normal_create(lv_obj_0, "Button 2");
+        lv_obj_set_name(button_2, "button_2");
 
-    lv_obj_t * button_5 = button_normal_create(lv_obj_0, "Button 5");
-    lv_obj_set_name(button_5, "button_5");
+        lv_obj_t * button_3 = button_normal_create(lv_obj_0, "Button 3");
+        lv_obj_set_name(button_3, "button_3");
 
-    lv_obj_t * button_6 = button_normal_create(lv_obj_0, "Button 6");
-    lv_obj_set_name(button_6, "button_6");
+        lv_obj_t * button_4 = button_normal_create(lv_obj_0, "Button 4");
+        lv_obj_set_name(button_4, "button_4");
 
-    lv_obj_t * button_7 = button_normal_create(lv_obj_0, "Button 7");
-    lv_obj_set_name(button_7, "button_7");
+        lv_obj_t * button_5 = button_normal_create(lv_obj_0, "Button 5");
+        lv_obj_set_name(button_5, "button_5");
+
+        lv_obj_t * button_6 = button_normal_create(lv_obj_0, "Button 6");
+        lv_obj_set_name(button_6, "button_6");
+
+        lv_obj_t * button_7 = button_normal_create(lv_obj_0, "Button 7");
+        lv_obj_set_name(button_7, "button_7");
 
 
-    /* create animation timeline(s) */
-    lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _LIST_TIMELINE_CNT);
-    at_array[LIST_TIMELINE_LIST_OPEN] = timeline_list_open_create(lv_obj_0);
-    lv_obj_set_user_data(lv_obj_0, at_array);
-    lv_obj_add_event_cb(lv_obj_0, free_timeline_event_cb, LV_EVENT_DELETE, at_array);
+        /* create animation timeline(s) */
+        lv_anim_timeline_t ** at_array = lv_malloc(sizeof(lv_anim_timeline_t *) * _LIST_TIMELINE_CNT);
+        at_array[LIST_TIMELINE_LIST_OPEN] = timeline_list_open_create(lv_obj_0);
+        lv_obj_set_user_data(lv_obj_0, at_array);
+        lv_obj_add_event_cb(lv_obj_0, free_timeline_event_cb, LV_EVENT_DELETE, at_array);
+
+        the_root = lv_obj_0;
+    }
+    #endif
 
     LV_TRACE_OBJ_CREATE("finished");
 
-    return lv_obj_0;
+    return the_root;
 }
 
 lv_anim_timeline_t * list_get_timeline(lv_obj_t * obj, list_timeline_t timeline_id)

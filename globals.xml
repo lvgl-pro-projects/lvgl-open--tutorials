@@ -22,6 +22,7 @@
 		<int name="subject_max_current" value="0" />
 		<int name="subject_timeout" value="0" />
 		<int name="subject_volume" value="0" />
+		<int name="subject_segment" value="0" />
 	</subjects>
 
 	<images memory="int_flash">
