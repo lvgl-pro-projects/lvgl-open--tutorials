@@ -10,19 +10,19 @@
 		     the value will remain as the "permanent" screens are not recreated. -->
 		<lv_slider align="center" />
 
-		<!-- Jusr to explain what should happen -->
+		<!-- Just to explain what should happen -->
 		<lv_label
-			text="I'm NOT on a permanent screed,&#10; so my state will be lost"
+			text="I'm NOT on a permanent screen,&#10; so my state will be lost"
 			y="-30"
 			align="center"
 			style_text_align="center"
 		/>
 
-		<!-- This button should open the About screen  -->
+		<!-- This button should open the Main screen  -->
 		<lv_button align="bottom_mid" y="-10">
 			<lv_label text="Back" />
 			<!-- Since the Main screen is permanent <screen_load_event>
-			     shall be used just o load the already existing screen.  -->
+			     shall be used just to load the already existing screen.  -->
 			<screen_load_event screen="screen_main" anim_type="move_bottom" duration="500" />
 		</lv_button>
 	</view>

@@ -1,3 +1,5 @@
+<!-- Translations for each language. Reference a tag with translation_tag="..." on a widget.
+     See screens/translations for a usage example. -->
 <translations languages="en de">
 	<translation tag="dog" char_count="40" en="This is a dog" de="Das ist ein Hund" />
 	<translation tag="cat" char_count="40" en="A curious little cat" de="Eine neugierige kleine Katze" />

@@ -18,7 +18,7 @@
 				<button_normal label_text="Third" />
 			</row>
 
-			<!-- A simple column with . Add a lot of them to make the screen scrolling. -->
+			<!-- A simple column. Add a lot of children to make the screen scroll. -->
 			<column style_pad_all="8" style_pad_row="8">
 				<lv_checkbox text="First" />
 				<lv_checkbox text="Second" />

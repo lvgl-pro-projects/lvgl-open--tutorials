@@ -1,6 +1,6 @@
 <screen>
 	<!-- Create a timeline for the screen that consists of other timelines.
-	     It will be played whe nthe screen is loaded -->
+	     It will be played when the screen is loaded -->
 	<animations>
 		<timeline name="screen_open">
 			<!-- Use <button_normal>'s timeline to show_up the Show and Hide buttons -->
@@ -16,8 +16,8 @@
 		<!-- Play the "screen_open" timeline on "self" (this screen) when it's loaded -->
 		<play_timeline_event target="self" timeline="screen_open" trigger="screen_loaded" />
 
-		<!-- Just create the list asa it is. 
-		     Give it a name so that it an be easily referenced in the timeline target. -->
+		<!-- Just create the list as it is.
+		     Give it a name so that it can be easily referenced in the timeline target. -->
 		<list name="button_list" />
 
 		<!-- A Show button play the open animation of the list -->

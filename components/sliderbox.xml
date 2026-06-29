@@ -1,3 +1,4 @@
+<!-- A title + and - buttons + a slider, all bound to one subject. Shows light/dark previews. -->
 <component>
 	<previews>
 		<preview name="light" style_pad_all="20" />
@@ -26,8 +27,8 @@
 		<!-- Just show the title from the API property -->
 		<lv_label text="$title" width="100%" style_text_align="center" />
 
-		<!-- The round button just needs a subject and a text and it will incrememnt
-        that subject accordingly. Check out it's implementation too.  -->
+		<!-- The round button just needs a subject and a text and it will increment
+        that subject accordingly. Check out its implementation too.  -->
 		<round_button text="-" flex_in_new_track="true" subject="$subject" step="-1" />
 
 		<!-- Bind the label's text to the subject. As format string use the unit -->

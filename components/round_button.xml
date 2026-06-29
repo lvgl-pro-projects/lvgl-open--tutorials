@@ -1,3 +1,4 @@
+<!-- A small round button that increments a subject on press and long-press repeat. -->
 <component>
 	<api>
 		<prop name="text" type="string" default="?" />

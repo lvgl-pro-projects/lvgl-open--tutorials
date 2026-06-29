@@ -1,9 +1,9 @@
-<!-- A simple list component which definies its open animation -->
+<!-- A simple list component which defines its open animation -->
 <component>
 	<animations>
 		<timeline name="list_open">
-			<!-- Fade in the list and translate it from the left. 
-			     Transate_x is a good was to animate the X position in a realtive way. -->
+			<!-- Fade in the list and translate it from the left.
+			     Translate_x is a good way to animate the X position in a relative way. -->
 			<animation prop="opa" start="0" end="255" duration="300" early_apply="true" target="self" />
 			<animation prop="translate_x" start="-60" end="0" duration="300" early_apply="true" target="self" />
 

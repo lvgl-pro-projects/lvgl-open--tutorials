@@ -2,7 +2,7 @@
 	<!-- Play the test on the Tests panel -->
 
 	<view extends="screen_layouts">
-		<!-- Add some extra contant ikn the test -->
+		<!-- Add some extra content in the test -->
 		<lv_label translation_tag="dog" align="center" />
 		<lv_slider bind_value="subject_volume" align="center" y="40" x="20" />
 	</view>
@@ -18,7 +18,7 @@
 		<wait ms="500" />
 		<screenshot_compare path="checkbox_1.png" />
 
-		<!-- Click and other checkbox by name and wait for the animations -->
+		<!-- Click another checkbox by name and wait for the animations -->
 		<click_on name="lv_checkbox_5" />
 		<wait ms="500" />
 		<screenshot_compare path="checkbox_2.png" />

@@ -1,3 +1,5 @@
+<!-- Project-wide definitions: shared constants, styles, subjects, images and fonts.
+     Anything defined here can be referenced from any screen or component. -->
 <globals>
 	<api>
 		<!-- Add <enumdefs> here -->
@@ -57,11 +59,11 @@
 			symbols="°"
 		/>
 		<!-- <tiny_ttf as_file="false" means convert the TTF files raw data to a C array and load it runtime with TinyTTF.
-		     Characters will be rendered at runtime from the TTF fiile./> -->
+		     Characters will be rendered at runtime from the TTF file./> -->
 		<tiny_ttf name="montserrat_18_tiny_ttf_data" as_file="false" size="18" src_path="fonts/Montserrat_Medium.ttf" />
 
 		<!-- <tiny_ttf as_file="true" means load the TTF files at runtime with TinyTTF.
-		     Characters will be rendered at runtime from the TTF fiile./> -->
+		     Characters will be rendered at runtime from the TTF file./> -->
 		<tiny_ttf name="montserrat_20_tiny_ttf_file" as_file="true" size="20" src_path="fonts/Montserrat_Medium.ttf" />
 	</fonts>
 </globals>
