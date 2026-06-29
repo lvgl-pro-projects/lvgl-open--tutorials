@@ -28,7 +28,8 @@ other screens:
   to be integrated in your application. See the [Integration guide](https://lvgl.io/docs/pro/integration/using-exported-c-code)
 
 - **F5** (or **Run / Start Debugging**) launches the built-in simulator in a new window so you can
-  run and debug the C code.
+  run and debug the C code. See [`sim/README.md`](sim/README.md) for how the simulator works and how
+  to build it from the command line.
 
 ## Design mode
 

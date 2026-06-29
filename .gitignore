@@ -1,4 +1,4 @@
 preview-build
 .cache.json
-*_gen.h
-*_gen.c
+build/
+

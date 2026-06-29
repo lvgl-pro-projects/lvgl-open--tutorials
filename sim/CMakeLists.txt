@@ -39,6 +39,10 @@ set(EXECUTABLE_OUTPUT_PATH "${CMAKE_BINARY_DIR}/bin")
 #  Fetch LVGL
 # ---------------------------------------------------------------------------
 include(FetchContent)
+# Silence the FetchContent_Populate deprecation warning (CMake >= 3.30).
+if(POLICY CMP0169)
+  cmake_policy(SET CMP0169 OLD)
+endif()
 FetchContent_Declare(
   lvgl
   GIT_REPOSITORY https://github.com/lvgl/lvgl.git
@@ -47,7 +51,7 @@ FetchContent_Declare(
 
 FetchContent_GetProperties(lvgl)
 if(NOT lvgl_POPULATED)
-  message(STATUS "Fetching LVGL ${LVGL_VERSION} ...")
+  message(STATUS "Fetching LVGL ${LVGL_VERSION}. It might take a few minutes ...")
   FetchContent_Populate(lvgl)
 endif()
 
